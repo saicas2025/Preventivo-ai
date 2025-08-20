@@ -1,22 +1,42 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="it">
 <head>
-  <meta charset="UTF-8" />
-  <title>Preventivo AI</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Preventivo AI + Chat</title>
   <link rel="stylesheet" href="style.css" />
-  <script src="config.js"></script>
-  <script src="app.js" defer></script>
 </head>
 <body>
-  <h1>Preventivo AI + Chat</h1>
+  <main class="container">
+    <h1>Preventivo AI + Chat</h1>
 
-  <section id="chat">
-    <h2>Chat</h2>
-    <textarea id="chatInput" placeholder="Scrivi un messaggio..."></textarea>
-    <button onclick="sendChat()">Invia</button>
-    <div id="chatOutput"></div>
-  </section>
+    <section>
+      <h2>Chat</h2>
+      <input id="chatInput" placeholder="Scrivi un messaggio..." />
+      <button id="chatBtn">Invia</button>
+      <pre id="chatOut"></pre>
+    </section>
 
+    <section>
+      <h2>Calcola preventivo</h2>
+      <input id="materiale" placeholder="Materiale (es. 10 kg ferro)" />
+      <input id="lavorazioni" placeholder="Lavorazioni (es. taglio, piega)" />
+      <button id="calcBtn">Calcola</button>
+      <pre id="quoteOut"></pre>
+    </section>
+
+    <section>
+      <h2>Carica PDF</h2>
+      <input type="file" id="pdf" accept=".pdf" />
+      <button id="uploadBtn">Analizza PDF</button>
+      <pre id="pdfOut"></pre>
+    </section>
+  </main>
+
+  <script type="module" src="config.js"></script>
+  <script type="module" src="app.js"></script>
+</body>
+</html>
   <section id="preventivo">
     <h2>Calcola preventivo</h2>
     <input id="materiale" placeholder="Materiale (es. 10 kg ferro)" />
